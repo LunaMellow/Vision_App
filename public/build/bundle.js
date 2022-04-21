@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -23,14 +23,6 @@ var app = (function () {
     }
     function safe_not_equal(a, b) {
         return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
-    }
-    let src_url_equal_anchor;
-    function src_url_equal(element_src, url) {
-        if (!src_url_equal_anchor) {
-            src_url_equal_anchor = document.createElement('a');
-        }
-        src_url_equal_anchor.href = url;
-        return element_src === src_url_equal_anchor.href;
     }
     function is_empty(obj) {
         return Object.keys(obj).length === 0;
@@ -61,14 +53,6 @@ var app = (function () {
     }
     function children(element) {
         return Array.from(element.childNodes);
-    }
-    function set_style(node, key, value, important) {
-        if (value === null) {
-            node.style.removeProperty(key);
-        }
-        else {
-            node.style.setProperty(key, value, important ? 'important' : '');
-        }
     }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
@@ -352,21 +336,20 @@ var app = (function () {
     	let main;
     	let section;
     	let div0;
-    	let img;
-    	let img_src_value;
     	let t0;
     	let div1;
+    	let h3;
     	let t2;
     	let div2;
     	let t4;
     	let div3;
     	let t6;
     	let div4;
-    	let t8;
+    	let t7;
     	let div5;
-    	let t10;
+    	let t9;
     	let div6;
-    	let t11;
+    	let t10;
     	let div7;
 
     	const block = {
@@ -374,10 +357,10 @@ var app = (function () {
     			main = element("main");
     			section = element("section");
     			div0 = element("div");
-    			img = element("img");
     			t0 = space();
     			div1 = element("div");
-    			div1.textContent = "2";
+    			h3 = element("h3");
+    			h3.textContent = "Search a keyword";
     			t2 = space();
     			div2 = element("div");
     			div2.textContent = "3";
@@ -386,41 +369,36 @@ var app = (function () {
     			div3.textContent = "4";
     			t6 = space();
     			div4 = element("div");
-    			div4.textContent = "5";
-    			t8 = space();
+    			t7 = space();
     			div5 = element("div");
     			div5.textContent = "6";
-    			t10 = space();
+    			t9 = space();
     			div6 = element("div");
-    			t11 = space();
+    			t10 = space();
     			div7 = element("div");
     			div7.textContent = "8";
-    			set_style(img, "height", "3vh");
-    			set_style(img, "width", "6.5vh");
-    			set_style(img, "padding-top", "3vh");
-    			if (!src_url_equal(img.src, img_src_value = "https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "Vision");
-    			add_location(img, file, 7, 3, 102);
-    			attr_dev(div0, "class", "sidebar-top svelte-m940fc");
-    			add_location(div0, file, 6, 2, 73);
-    			attr_dev(div1, "class", "searchbar svelte-m940fc");
-    			add_location(div1, file, 9, 2, 283);
-    			attr_dev(div2, "class", "navigation-top svelte-m940fc");
-    			add_location(div2, file, 10, 2, 316);
-    			attr_dev(div3, "class", "sidebar-right svelte-m940fc");
-    			add_location(div3, file, 11, 2, 354);
-    			attr_dev(div4, "class", "sidebar-bottom svelte-m940fc");
-    			add_location(div4, file, 12, 2, 391);
-    			attr_dev(div5, "class", "secondary-field svelte-m940fc");
-    			add_location(div5, file, 13, 2, 429);
-    			attr_dev(div6, "class", "main-field svelte-m940fc");
-    			add_location(div6, file, 14, 2, 468);
-    			attr_dev(div7, "class", "sidebar-right-bottom svelte-m940fc");
-    			add_location(div7, file, 17, 2, 505);
-    			attr_dev(section, "class", "layout svelte-m940fc");
-    			add_location(section, file, 5, 1, 46);
-    			attr_dev(main, "class", "svelte-m940fc");
-    			add_location(main, file, 4, 0, 38);
+    			attr_dev(div0, "class", "sidebar-top svelte-1iih6s1");
+    			add_location(div0, file, 7, 2, 89);
+    			attr_dev(h3, "class", "searchbar-field svelte-1iih6s1");
+    			add_location(h3, file, 10, 3, 153);
+    			attr_dev(div1, "class", "searchbar svelte-1iih6s1");
+    			add_location(div1, file, 9, 2, 126);
+    			attr_dev(div2, "class", "navigation-top svelte-1iih6s1");
+    			add_location(div2, file, 12, 2, 214);
+    			attr_dev(div3, "class", "sidebar-right svelte-1iih6s1");
+    			add_location(div3, file, 13, 2, 252);
+    			attr_dev(div4, "class", "sidebar-bottom svelte-1iih6s1");
+    			add_location(div4, file, 14, 2, 289);
+    			attr_dev(div5, "class", "secondary-field svelte-1iih6s1");
+    			add_location(div5, file, 17, 2, 383);
+    			attr_dev(div6, "class", "main-field svelte-1iih6s1");
+    			add_location(div6, file, 18, 2, 422);
+    			attr_dev(div7, "class", "sidebar-right-bottom svelte-1iih6s1");
+    			add_location(div7, file, 21, 2, 459);
+    			attr_dev(section, "class", "layout svelte-1iih6s1");
+    			add_location(section, file, 6, 1, 62);
+    			attr_dev(main, "class", "svelte-1iih6s1");
+    			add_location(main, file, 5, 0, 54);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -429,20 +407,20 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			append_dev(main, section);
     			append_dev(section, div0);
-    			append_dev(div0, img);
     			append_dev(section, t0);
     			append_dev(section, div1);
+    			append_dev(div1, h3);
     			append_dev(section, t2);
     			append_dev(section, div2);
     			append_dev(section, t4);
     			append_dev(section, div3);
     			append_dev(section, t6);
     			append_dev(section, div4);
-    			append_dev(section, t8);
+    			append_dev(section, t7);
     			append_dev(section, div5);
-    			append_dev(section, t10);
+    			append_dev(section, t9);
     			append_dev(section, div6);
-    			append_dev(section, t11);
+    			append_dev(section, t10);
     			append_dev(section, div7);
     		},
     		p: noop,
@@ -468,7 +446,8 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let { name } = $$props;
-    	const writable_props = ['name'];
+    	let { id } = $$props;
+    	const writable_props = ['name', 'id'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
@@ -476,25 +455,27 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
     	};
 
-    	$$self.$capture_state = () => ({ name });
+    	$$self.$capture_state = () => ({ name, id });
 
     	$$self.$inject_state = $$props => {
     		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name];
+    	return [name, id];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
+    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0, id: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -509,6 +490,10 @@ var app = (function () {
     		if (/*name*/ ctx[0] === undefined && !('name' in props)) {
     			console.warn("<App> was created without expected prop 'name'");
     		}
+
+    		if (/*id*/ ctx[1] === undefined && !('id' in props)) {
+    			console.warn("<App> was created without expected prop 'id'");
+    		}
     	}
 
     	get name() {
@@ -518,12 +503,21 @@ var app = (function () {
     	set name(value) {
     		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get id() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     const app = new App({
     	target: document.body,
     	props: {
-    		name: 'Luna'
+    		name: 'Luna',
+    		id: '3333'
     	}
     });
 
