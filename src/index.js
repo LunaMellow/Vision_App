@@ -15,6 +15,8 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    titleBarStyle: 'customButtonsOnHover',
+    frame: false,
     width: 800,
     height: 600,
   });
