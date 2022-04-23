@@ -14,7 +14,7 @@
 		<div class="navigation-top noselect">3</div>
 		<div class="sidebar-right">4</div>
 		<div class="sidebar-bottom">
-			<img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision">
+			<span data-text="Hi {name}!" class="tooltip"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
 			<!-- <h4 class="profile-name">{name}#{id}</h4> -->
 		</div>
 		<div class="secondary-field">6</div>
@@ -34,6 +34,38 @@
 </main>
 
 <style>
+	.tooltip {
+  		position:relative; /* making the .tooltip span a container for the tooltip text */
+  		border-bottom:1px dashed #000; /* little indicater to indicate it's hoverable */
+	}
+
+	.tooltip:before {
+  		content: attr(data-text); /* here's the magic */
+  		position:absolute;
+  
+  		/* vertically center */
+  		top:50%;
+  		transform:translateY(-50%);
+  
+  		/* move to right */
+  		left:100%;
+  		margin-left:15px; /* and add a small left margin */
+  
+  		/* basic styles */
+  		width:400%;
+  		padding:10px;
+  		border-radius:10px;
+  		background:rgb(255, 255, 255);
+  		color: rgb(0, 0, 0);
+  		text-align:center;
+
+  		display:none; /* hide by default */
+}
+
+.tooltip:hover:before {
+  display:block;
+}
+
 	main {
 		text-align: center;
 		max-width: 240px;	
