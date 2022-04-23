@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -23,6 +23,14 @@ var app = (function () {
     }
     function safe_not_equal(a, b) {
         return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
     }
     function is_empty(obj) {
         return Object.keys(obj).length === 0;
@@ -301,6 +309,13 @@ var app = (function () {
         else
             dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
     }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
+    }
     function validate_slots(name, slot, keys) {
         for (const slot_key of Object.keys(slot)) {
             if (!~keys.indexOf(slot_key)) {
@@ -334,33 +349,53 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let main;
-    	let section;
+    	let body;
     	let div0;
     	let t0;
     	let div1;
-    	let h3;
     	let t2;
     	let div2;
     	let t4;
     	let div3;
     	let t6;
     	let div4;
+    	let span;
+    	let img0;
+    	let img0_src_value;
+    	let span_data_text_value;
     	let t7;
     	let div5;
     	let t9;
     	let div6;
-    	let t10;
+    	let t11;
     	let div7;
+    	let t13;
+    	let div8;
+    	let t15;
+    	let div10;
+    	let img1;
+    	let img1_src_value;
+    	let t16;
+    	let div9;
+    	let h4;
+    	let t17;
+    	let t18;
+    	let h5;
+    	let t19;
+    	let t20;
+    	let t21;
+    	let div11;
+    	let t23;
+    	let div12;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			section = element("section");
+    			body = element("body");
     			div0 = element("div");
     			t0 = space();
     			div1 = element("div");
-    			h3 = element("h3");
-    			h3.textContent = "Search a keyword";
+    			div1.textContent = "2";
     			t2 = space();
     			div2 = element("div");
     			div2.textContent = "3";
@@ -369,35 +404,81 @@ var app = (function () {
     			div3.textContent = "4";
     			t6 = space();
     			div4 = element("div");
+    			span = element("span");
+    			img0 = element("img");
     			t7 = space();
     			div5 = element("div");
     			div5.textContent = "6";
     			t9 = space();
     			div6 = element("div");
-    			t10 = space();
+    			div6.textContent = "7";
+    			t11 = space();
     			div7 = element("div");
     			div7.textContent = "8";
-    			attr_dev(div0, "class", "sidebar-top svelte-1iih6s1");
-    			add_location(div0, file, 7, 2, 89);
-    			attr_dev(h3, "class", "searchbar-field svelte-1iih6s1");
-    			add_location(h3, file, 10, 3, 153);
-    			attr_dev(div1, "class", "searchbar svelte-1iih6s1");
-    			add_location(div1, file, 9, 2, 126);
-    			attr_dev(div2, "class", "navigation-top svelte-1iih6s1");
-    			add_location(div2, file, 12, 2, 214);
-    			attr_dev(div3, "class", "sidebar-right svelte-1iih6s1");
-    			add_location(div3, file, 13, 2, 252);
-    			attr_dev(div4, "class", "sidebar-bottom svelte-1iih6s1");
-    			add_location(div4, file, 14, 2, 289);
-    			attr_dev(div5, "class", "secondary-field svelte-1iih6s1");
-    			add_location(div5, file, 17, 2, 383);
-    			attr_dev(div6, "class", "main-field svelte-1iih6s1");
-    			add_location(div6, file, 18, 2, 422);
-    			attr_dev(div7, "class", "sidebar-right-bottom svelte-1iih6s1");
-    			add_location(div7, file, 21, 2, 459);
-    			attr_dev(section, "class", "layout svelte-1iih6s1");
-    			add_location(section, file, 6, 1, 62);
-    			attr_dev(main, "class", "svelte-1iih6s1");
+    			t13 = space();
+    			div8 = element("div");
+    			div8.textContent = "9";
+    			t15 = space();
+    			div10 = element("div");
+    			img1 = element("img");
+    			t16 = space();
+    			div9 = element("div");
+    			h4 = element("h4");
+    			t17 = text(/*name*/ ctx[0]);
+    			t18 = space();
+    			h5 = element("h5");
+    			t19 = text("#");
+    			t20 = text(/*id*/ ctx[1]);
+    			t21 = space();
+    			div11 = element("div");
+    			div11.textContent = "11";
+    			t23 = space();
+    			div12 = element("div");
+    			div12.textContent = "12";
+    			attr_dev(div0, "class", "sidebar-top noselect svelte-1b5zyvn");
+    			add_location(div0, file, 7, 2, 86);
+    			attr_dev(div1, "class", "searchbar svelte-1b5zyvn");
+    			add_location(div1, file, 9, 2, 132);
+    			attr_dev(div2, "class", "navigation-top noselect svelte-1b5zyvn");
+    			add_location(div2, file, 13, 2, 243);
+    			attr_dev(div3, "class", "sidebar-right svelte-1b5zyvn");
+    			add_location(div3, file, 14, 2, 290);
+    			attr_dev(img0, "class", "logo svelte-1b5zyvn");
+    			if (!src_url_equal(img0.src, img0_src_value = "https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "Vision");
+    			add_location(img0, file, 16, 48, 404);
+    			attr_dev(span, "data-text", span_data_text_value = "Hi " + /*name*/ ctx[0] + "!");
+    			attr_dev(span, "class", "tooltip svelte-1b5zyvn");
+    			add_location(span, file, 16, 3, 359);
+    			attr_dev(div4, "class", "sidebar-bottom svelte-1b5zyvn");
+    			add_location(div4, file, 15, 2, 327);
+    			attr_dev(div5, "class", "secondary-field svelte-1b5zyvn");
+    			add_location(div5, file, 19, 2, 606);
+    			attr_dev(div6, "class", "main-field svelte-1b5zyvn");
+    			add_location(div6, file, 20, 2, 645);
+    			attr_dev(div7, "class", "sidebar-right-bottom svelte-1b5zyvn");
+    			add_location(div7, file, 21, 2, 679);
+    			attr_dev(div8, "class", "bottombar-left svelte-1b5zyvn");
+    			add_location(div8, file, 22, 2, 723);
+    			attr_dev(img1, "class", "profilepicture svelte-1b5zyvn");
+    			if (!src_url_equal(img1.src, img1_src_value = "https://cdn.discordapp.com/attachments/640641733151162388/966631103211401276/ferret_summer.jpeg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "User: ");
+    			add_location(img1, file, 24, 3, 807);
+    			attr_dev(h4, "class", "username-profile-field svelte-1b5zyvn");
+    			add_location(h4, file, 26, 4, 985);
+    			attr_dev(h5, "class", "username-id-field svelte-1b5zyvn");
+    			add_location(h5, file, 27, 4, 1036);
+    			attr_dev(div9, "class", "profile-info svelte-1b5zyvn");
+    			add_location(div9, file, 25, 3, 954);
+    			attr_dev(div10, "class", "bottombar-secondary noselect svelte-1b5zyvn");
+    			add_location(div10, file, 23, 2, 761);
+    			attr_dev(div11, "class", "bottombar-main svelte-1b5zyvn");
+    			add_location(div11, file, 30, 2, 1098);
+    			attr_dev(div12, "class", "bottombar-right svelte-1b5zyvn");
+    			add_location(div12, file, 31, 2, 1137);
+    			attr_dev(body, "class", "layout svelte-1b5zyvn");
+    			add_location(body, file, 6, 1, 62);
+    			attr_dev(main, "class", "svelte-1b5zyvn");
     			add_location(main, file, 5, 0, 54);
     		},
     		l: function claim(nodes) {
@@ -405,25 +486,50 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, section);
-    			append_dev(section, div0);
-    			append_dev(section, t0);
-    			append_dev(section, div1);
-    			append_dev(div1, h3);
-    			append_dev(section, t2);
-    			append_dev(section, div2);
-    			append_dev(section, t4);
-    			append_dev(section, div3);
-    			append_dev(section, t6);
-    			append_dev(section, div4);
-    			append_dev(section, t7);
-    			append_dev(section, div5);
-    			append_dev(section, t9);
-    			append_dev(section, div6);
-    			append_dev(section, t10);
-    			append_dev(section, div7);
+    			append_dev(main, body);
+    			append_dev(body, div0);
+    			append_dev(body, t0);
+    			append_dev(body, div1);
+    			append_dev(body, t2);
+    			append_dev(body, div2);
+    			append_dev(body, t4);
+    			append_dev(body, div3);
+    			append_dev(body, t6);
+    			append_dev(body, div4);
+    			append_dev(div4, span);
+    			append_dev(span, img0);
+    			append_dev(body, t7);
+    			append_dev(body, div5);
+    			append_dev(body, t9);
+    			append_dev(body, div6);
+    			append_dev(body, t11);
+    			append_dev(body, div7);
+    			append_dev(body, t13);
+    			append_dev(body, div8);
+    			append_dev(body, t15);
+    			append_dev(body, div10);
+    			append_dev(div10, img1);
+    			append_dev(div10, t16);
+    			append_dev(div10, div9);
+    			append_dev(div9, h4);
+    			append_dev(h4, t17);
+    			append_dev(div9, t18);
+    			append_dev(div9, h5);
+    			append_dev(h5, t19);
+    			append_dev(h5, t20);
+    			append_dev(body, t21);
+    			append_dev(body, div11);
+    			append_dev(body, t23);
+    			append_dev(body, div12);
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*name*/ 1 && span_data_text_value !== (span_data_text_value = "Hi " + /*name*/ ctx[0] + "!")) {
+    				attr_dev(span, "data-text", span_data_text_value);
+    			}
+
+    			if (dirty & /*name*/ 1) set_data_dev(t17, /*name*/ ctx[0]);
+    			if (dirty & /*id*/ 2) set_data_dev(t20, /*id*/ ctx[1]);
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
@@ -516,7 +622,7 @@ var app = (function () {
     const app = new App({
     	target: document.body,
     	props: {
-    		name: 'Luna',
+    		name: 'LunaMellow',
     		id: '3333'
     	}
     });
