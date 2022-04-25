@@ -157,10 +157,10 @@
 }
 
 	.profilepicture {
-		margin-top: 5%; 
-		margin-left: 1.5vh; 
+		margin-top: 4%; 
+		margin-left: 2vh; 
 		height: 3.5vh; 
-		border: solid 2px rgb(94, 94, 94); 
+		border: solid 2px rgb(211, 211, 211); 
 		transition: transform .15s; /* Animation */
 		border-radius: 50%;
 		float:left;
