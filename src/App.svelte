@@ -24,7 +24,14 @@
 			</div>
 		</div>
 		<div class="secondary-field noselect">6</div>
-		<div class="main-field noselect">7</div>
+		<div class="main-field noselect">
+			<div class="main-field-gradient">
+				<div class="main-field-container">
+					<h1 id="main-field-title">Mellowie</h1>
+					<h4 id="main-field-tip">Fullstack Developer</h4>
+				</div>
+			</div>
+		</div>
 		<div class="sidebar-right-bottom noselect">8</div>
 		<div class="bottombar-left noselect">
 			<button class="sidebar-buttons fadein-6s"><i class="fa fa-gear"></i></button>
@@ -44,6 +51,19 @@
 </main>
 
 <style>
+	@font-face {
+		font-family: 'avenircondensed';
+		src: url('/Users/lunasofiebergh/Documents/Webapp/vision/fonts/Avenir Next Condensed.ttc') format('TrueType');
+	}
+	@font-face {
+		font-family: 'avenirnext';
+		src: url('/Users/lunasofiebergh/Documents/Webapp/vision/fonts/Avenir Next.ttc') format('TrueType');
+	}
+	@font-face {
+		font-family: 'avenir';
+		src: url('/Users/lunasofiebergh/Documents/Webapp/vision/fonts/Avenir.ttc') format('TrueType');
+	}
+
 	main {
 		overflow-y: hidden;
 		text-align: center;
@@ -51,6 +71,7 @@
 	}
 	body {
 		padding: 0px;
+		font-family: avenirnext;
 	}
 
 	@media (min-width: 640px) {
@@ -58,6 +79,7 @@
 			max-width: none;
 		}
 	}
+
 	.layout {
   		width: 100%;
   		height: 100vh;
@@ -113,6 +135,16 @@
 	}
 	.bottombar-right {
 		background-color: #111720;
+	}
+
+	.main-field-gradient {
+		height: 50vh;
+		padding-top: 1vh;
+		width: 100%;
+		background: -webkit-linear-gradient(rgb(240, 72, 255), rgb(52, 214, 255)); 
+		-webkit-background-clip: text;
+		background-clip: text;
+  		-webkit-text-fill-color: transparent;
 	}
 	
 	.fadein-6s {
@@ -241,6 +273,26 @@
     -o-animation: fadein .5s; /* Opera < 12.1 */
     animation: fadein .5s;
 }
+
+.main-field-container {
+	color: white;
+	font-family: avenirnext;
+	text-align: left;
+	margin-left: 5vh;
+	line-height:0%;
+}
+
+#main-field-title {
+	font-size: 10vh;
+	margin-top: 9%;
+
+}
+
+#main-field-tip {
+	font-size: 2.5vh;
+	margin-left: .5vh;
+
+}	
 
 /*-------------------------------- Home BUTTON SIDEBAR --------------------------------*/
 
