@@ -95,7 +95,7 @@ const finishSpin = () => {
     // All 3 values are the same
     jackpot = jackpot + 1
     jackpots.label = 'Jackpots: ' + jackpot
-    jackpots.textColor = '#FFF'
+    jackpots.textColor = '#FDFF00'
 
     result.label = '💰 Jackpot!'
     result.textColor = '#FDFF00'
@@ -123,7 +123,7 @@ const finishSpin = () => {
 const touchBar = new TouchBar({
   items: [
     spin,
-    new TouchBarSpacer({ size: 'large' }),
+    new TouchBarSpacer({ size: 'small' }),
     dash1,
     new TouchBarSpacer({ size: 'small'}),
     jackpots,
@@ -131,7 +131,7 @@ const touchBar = new TouchBar({
     wins,
     new TouchBarSpacer({ size: 'small'}),
     losses,
-    new TouchBarSpacer({ size: 'large' }),
+    new TouchBarSpacer({ size: 'small' }),
     dash2,
     new TouchBarSpacer({ size: 'medium'}),
     reel1,
@@ -141,7 +141,7 @@ const touchBar = new TouchBar({
     reel3,
     new TouchBarSpacer({ size: 'medium' }),
     dash3,
-    new TouchBarSpacer({ size: 'large' }),
+    new TouchBarSpacer({ size: 'small' }),
     result,
     new TouchBarSpacer({ size: 'large' })
   ]
