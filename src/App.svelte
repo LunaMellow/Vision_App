@@ -157,6 +157,7 @@
 	.sidebar-buttons {
 		background: -webkit-linear-gradient(rgb(240, 72, 255), rgb(52, 214, 255)); 
 		-webkit-background-clip: text;
+		background-clip: text;
   		-webkit-text-fill-color: transparent;
 		border: 0;
 		font-size: 3vh;
@@ -168,6 +169,7 @@
 	.sidebar-buttons:hover {
 		background: white;
 		-webkit-background-clip: text;
+		background-clip: text;
   		-webkit-text-fill-color: transparent;
 		transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
