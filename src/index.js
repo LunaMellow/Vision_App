@@ -164,7 +164,7 @@ const createWindow = () => {
     titleBarStyle: 'customButtonsOnHover',
     resizable: true,
     frame: true,
-    width: 1350,
+    width: 1150,
     height: 700,
     minHeight: 700,
     minWidth: 1150,
