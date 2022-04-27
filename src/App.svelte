@@ -71,7 +71,7 @@
 	}
 	body {
 		padding: 0px;
-		font-family: avenirnext;
+		font-family: avenir;
 	}
 
 	@media (min-width: 640px) {
