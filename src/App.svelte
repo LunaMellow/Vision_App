@@ -138,7 +138,7 @@
 	}
 
 	.main-field-gradient {
-		height: 50vh;
+		height: 25vh;
 		padding-top: 1vh;
 		width: 100%;
 		background: -webkit-linear-gradient(rgb(240, 72, 255), rgb(52, 214, 255)); 
