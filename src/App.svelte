@@ -27,8 +27,8 @@
 		<div class="main-field noselect">
 			<div class="main-field-gradient">
 				<div class="main-field-container">
-					<h1 id="main-field-title">Mellowie</h1>
-					<h4 id="main-field-tip">Fullstack Developer</h4>
+					<!-- <h1 id="main-field-title">Mellowie</h1>
+					<h4 id="main-field-tip">Fullstack Developer</h4> -->
 				</div>
 			</div>
 		</div>
