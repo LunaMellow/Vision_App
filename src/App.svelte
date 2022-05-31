@@ -2,55 +2,157 @@
 	export let name;
 	export let id;
 
-	import { Router } from "@roxi/routify";
-	import { routes } from "../.routify/routes";
-</script>
+	/* SHOW ABOUT TAB */
+	function showAbout() {
+		var hideAll = document.getElementById("everything");
+		hideAll.style.display === "none"
+	}
+	/*-------------------*/
 
-<Router {routes} />
+
+	/* SHOW PROJECTS TAB */
+	function showProjects() {
+
+	}	
+	/*-------------------*/
+
+
+	/* SHOW PROJECTS TAB */
+	function showDevProc() {
+
+	}	
+	/*-------------------*/
+
+
+	/* SHOW PROJECTS TAB */
+	function showSettings() {
+
+	}	
+	/*-------------------*/
+	
+</script>
 
 <main>
 	<body onload="startTime()" class="layout fadein-2s">
-		<div class="sidebar-top noselect">
-		</div>
-		<div class="searchbar noselect">
-			<!-- <h3 class="searchbar-field noselect">Search a keyword</h3> -->
-			2
-		</div>
-		<div class="navigation-top noselect">3</div>
-		<div class="sidebar-right noselect">4</div>
-		<div class="sidebar-bottom noselect">
-			<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
-			<!-- <h4 class="profile-name">{name}#{id}</h4> -->
-			<div class="sidebar">
-				<span data-text="Home" class="tooltip-sidebar-home"><button class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
-				<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s"><i class="fa fa-user"></i></button></span>
-				<span data-text="Projects" class="tooltip-sidebar-book"><button class="sidebar-buttons fadein-5s"><i class="fa fa-book"></i></button></span>
-				<span data-text="Development process" class="tooltip-sidebar-laptop"><button class="sidebar-buttons fadein-6s"><i class="fa fa-laptop"></i></button></span>
+		<!-- <div id="home"> -->
+			<div class="sidebar-top noselect">
 			</div>
-		</div>
-		<div class="secondary-field noselect">6</div>
-		<div class="main-field noselect">
-			<div class="main-field-container">
-				<div class="main-content">
-
+			<div class="searchbar noselect">
+				<!-- <h3 class="searchbar-field noselect">Search a keyword</h3> -->
+				2
+			</div>
+			<div class="navigation-top noselect">3</div>
+			<div class="sidebar-right noselect">4</div>
+			<div class="sidebar-bottom noselect">
+				<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
+				<!-- <h4 class="profile-name">{name}#{id}</h4> -->
+				<div class="sidebar">
+					<span data-text="Home" class="tooltip-sidebar-home"><button class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
+					<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s" onclick="showAbout()"><i class="fa fa-user"></i></button></span>
+					<span data-text="Projects" class="tooltip-sidebar-book"><button class="sidebar-buttons fadein-5s" onclick="showProjects()"><i class="fa fa-book"></i></button></span>
+					<span data-text="Development" class="tooltip-sidebar-laptop"><button class="sidebar-buttons fadein-6s" onclick="showDevProc()"><i class="fa fa-laptop"></i></button></span>
 				</div>
 			</div>
-		</div>
-		<div class="sidebar-right-bottom noselect">8</div>
-		<div class="bottombar-left noselect">
-			<button class="sidebar-buttons fadein-6s"><i class="fa fa-gear"></i></button>
-		</div>
-		<div class="bottombar-secondary noselect">
-			<div class="profilepicture-container">
-				<img class="profilepicture fadein-6s" src="https://cdn.discordapp.com/attachments/640641733151162388/966631103211401276/ferret_summer.jpeg" alt="User: ">
+			<div class="secondary-field noselect" style="overflow-y: scroll">
+				<ul class="cards fadein-2s">
+					<h3 style="color:lightgray; border-bottom: solid 0.2vh #3a4f84; padding-bottom: 1.5vh; width: 80%; margin-right: 10%; margin-left: 10%">Incoming Messages</h3>
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">franksfan</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ How's u doing?</h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">Definitely Luna</h4>
+								<h6 class="item-name color-grey">❤️ Love EMERGY DWINKS</h6>
+								<h6 class="item-message">➤ Goodmorning</h6>
+							</div>
+						</div >
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">RosePhoenix</h4>
+								<h6 class="item-name color-grey">Catgirl</h6>
+								<h6 class="item-message">➤ [Attachment] - </h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">John</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ Hey whats up?</h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">John</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ Hey whats up?</h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">John</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ Hey whats up?</h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">John</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ Hey whats up?</h6>
+							</div>
+						</div>
+					</li>    
+					<li>
+						<div class="items">
+							<div class="item-text">
+								<h4 class="item-name">John</h4>
+								<h6 class="item-name color-grey">🍌 Nanism</h6>
+								<h6 class="item-message">➤ Hey whats up?</h6>
+							</div>
+						</div>
+					</li>    
+				</ul>
 			</div>
-			<div class="profile-info fadein-6s">
-				<h4 class="username-profile-field">{name}</h4>
-				<h5 class="username-id-field">#{id}</h5>
+			<div class="main-field noselect">
+				<div class="main-field-container">
+					<div class="main-content">
+
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="bottombar-main noselect">11</div>
-		<div class="bottombar-right noselect">12</div>
+			<div class="sidebar-right-bottom noselect">8</div>
+			<div class="bottombar-left noselect">
+				<button class="sidebar-buttons fadein-6s" onclick="showSettings()"><i class="fa fa-gear"></i></button>
+			</div>
+			<div class="bottombar-secondary noselect">
+				<div class="profilepicture-container">
+					<img class="profilepicture fadein-6s" src="https://cdn.discordapp.com/attachments/640641733151162388/966631103211401276/ferret_summer.jpeg" alt="User: ">
+				</div>
+				<div class="profile-info fadein-6s">
+					<h4 class="username-profile-field">{name}</h4>
+					<h5 class="username-id-field">#{id}</h5>
+				</div>
+			</div>
+			<div class="bottombar-main noselect">11</div>
+			<div class="bottombar-right noselect">12</div>
+		<!-- </div> -->
 	</body>
 </main>
 
@@ -68,19 +170,23 @@
 		src: url('/Users/lunasofiebergh/Documents/Webapp/vision/fonts/Avenir.ttc') format('TrueType');
 	}
 
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 	/* @font-face {
 		font-family: '';
 		src: url('') format('');
 	} */
 
+
 	main {
+		font-family: 'Noto Sans', sans-serif;		
 		overflow-y: hidden;
 		text-align: center;
 		max-width: 240px;	
 	}
 	body {
 		padding: 0px;
-		font-family: avenir;
+		font-family: 'Noto Sans', sans-serif;	
 	}
 
 	@media (min-width: 640px) {
@@ -280,7 +386,7 @@
 
 .main-field-container {
 	color: white;
-	font-family: avenirnext;
+	font-family: 'Noto Sans', sans-serif;	
 	text-align: left;
 	margin-left: 5vh;
 	line-height:0%;
@@ -322,7 +428,7 @@
   		padding-top: 1vh;
 		padding-bottom: 1vh;
 		padding-left: 1vh;
-		padding-right: 5vh;
+		padding-right: 5.5vh;
   		border-radius: 10px;
   		background:rgb(255, 255, 255);
   		color: rgb(0, 0, 0);
@@ -410,7 +516,7 @@
   		padding-top: 1vh;
 		padding-bottom: 1vh;
 		padding-left: 1vh;
-		padding-right: 6.2vh;
+		padding-right: 6.5vh;
   		border-radius: 10px;
   		background:rgb(255, 255, 255);
   		color: rgb(0, 0, 0);
@@ -453,7 +559,7 @@
   		padding-top: 1vh;
 		padding-bottom: 1vh;
 		padding-left: 1vh;
-		padding-right: 9.5vh;
+		padding-right: 10.5vh;
   		border-radius: 10px;
   		background:rgb(255, 255, 255);
   		color: rgb(0, 0, 0);
@@ -529,7 +635,7 @@
 			padding-right: 9.5vh;	
 		}
 		.tooltip-sidebar-laptop:before {
-			padding-right: 15vh;
+			padding-right: 16vh;
 		}
 	}
 
@@ -574,4 +680,63 @@
 		color: #e2e2e2;
 		margin-top: 0;
 	} */
+
+	.cards {
+		display: grid;
+		margin: 1vh;
+		list-style-type: none;
+		padding: .0vh;
+		margin-top: 0vh;
+	}
+
+	.items {
+		background: #222939;
+		margin: 1vh;
+		padding-top: .1vh;
+		border-radius: 1vh;
+		text-align: left;
+		box-shadow: 0vh .5vh .5vh rgba(0,0,0,0.15);
+		transition: transform 0.1s ease-in-out;
+
+	}
+
+	.items:hover {
+		transform: scale(1.05);
+	}
+
+	.item-text {
+		line-height: 0vh;
+		color: white;
+		padding: 0vh;
+		margin: 0vh;
+	}
+
+	.item-message {
+		padding: 1.5vh;
+		border-radius: .5vh;
+		background: rgb(73, 93, 149);
+		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		transition: box-shadow 0.2s ease-in-out;
+		transition: transform 0.1s ease-in-out;
+	}
+
+	.item-message:hover {
+		transform: scale(1.05);
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+		background: #3a4f84;
+	}
+
+	.item-name {
+		margin-left: 1vh;
+	}
+
+	.color-grey {
+		color: rgb(138, 138, 138);
+	}
+
+	@media only screen and (max-width: 1200px) {
+    .cards {
+        display: none;
+    }
+	}
 </style>
