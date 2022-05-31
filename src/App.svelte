@@ -1,27 +1,14 @@
 <script>
-	import NotFound from './routes/NotFound.svelte';
-	import Settings from './routes/Settings.svelte';
-	import Development from './routes/Development.svelte';
-	import Projects from './routes/Projects.svelte';
-	import Home from './routes/Home.svelte';
-	import Router from "svelte-spa-router";
-
-	let routes = {
-		"/": Home,
-		"/about": About,
-		"/projects": Projects,
-		"/development": Development,
-		"/settings": Settings,
-
-		"*": NotFound
-	}
-
 	export let name;
 	export let id;
+
+	import { Router } from "@roxi/routify";
+	import { routes } from "../.routify/routes";
 </script>
 
+<Router {routes} />
+
 <main>
-	<Router {routes}/>
 	<body onload="startTime()" class="layout fadein-2s">
 		<div class="sidebar-top noselect">
 		</div>
