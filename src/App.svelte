@@ -1,9 +1,27 @@
 <script>
+	import NotFound from './routes/NotFound.svelte';
+	import Settings from './routes/Settings.svelte';
+	import Development from './routes/Development.svelte';
+	import Projects from './routes/Projects.svelte';
+	import Home from './routes/Home.svelte';
+	import Router from "svelte-spa-router";
+
+	let routes = {
+		"/": Home,
+		"/about": About,
+		"/projects": Projects,
+		"/development": Development,
+		"/settings": Settings,
+
+		"*": NotFound
+	}
+
 	export let name;
 	export let id;
 </script>
 
 <main>
+	<Router {routes}/>
 	<body onload="startTime()" class="layout fadein-2s">
 		<div class="sidebar-top noselect">
 		</div>
@@ -25,10 +43,9 @@
 		</div>
 		<div class="secondary-field noselect">6</div>
 		<div class="main-field noselect">
-			<div class="main-field-gradient">
-				<div class="main-field-container">
-					<!-- <h1 id="main-field-title">Mellowie</h1>
-					<h4 id="main-field-tip">Fullstack Developer</h4> -->
+			<div class="main-field-container">
+				<div class="main-content">
+
 				</div>
 			</div>
 		</div>
@@ -63,6 +80,11 @@
 		font-family: 'avenir';
 		src: url('/Users/lunasofiebergh/Documents/Webapp/vision/fonts/Avenir.ttc') format('TrueType');
 	}
+
+	/* @font-face {
+		font-family: '';
+		src: url('') format('');
+	} */
 
 	main {
 		overflow-y: hidden;
@@ -114,6 +136,7 @@
 		background-color: #171c2a;
 		border-right: solid .4vh rgb(22, 28, 45);
 	}
+
 	.main-field { grid-area: main-field; 
 		background-color: #192030;
 	}
@@ -135,16 +158,6 @@
 	}
 	.bottombar-right {
 		background-color: #111720;
-	}
-
-	.main-field-gradient {
-		height: 25vh;
-		padding-top: 1vh;
-		width: 100%;
-		background: -webkit-linear-gradient(rgb(240, 72, 255), rgb(52, 214, 255)); 
-		-webkit-background-clip: text;
-		background-clip: text;
-  		-webkit-text-fill-color: transparent;
 	}
 	
 	.fadein-6s {
@@ -182,6 +195,10 @@
     	-o-animation: fadein 2s; /* Opera < 12.1 */
     	animation: fadein 2s;
 	}
+
+	/* .main-content {
+
+	} */
 
 	.sidebar {
 		margin-top: 2vh;
@@ -282,17 +299,17 @@
 	line-height:0%;
 }
 
-#main-field-title {
+/* #main-field-title {
 	font-size: 10vh;
 	margin-top: 9%;
 
-}
+} */
 
-#main-field-tip {
+/* #main-field-tip {
 	font-size: 2.5vh;
 	margin-left: .5vh;
 
-}	
+}	 */
 
 /*-------------------------------- Home BUTTON SIDEBAR --------------------------------*/
 
