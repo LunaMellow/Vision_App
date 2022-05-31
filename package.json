@@ -50,6 +50,7 @@
     "concurrently": "^7.1.0",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-squirrel-startup": "^1.0.0",
+    "mysql": "^2.18.1",
     "rollup": "^2.70.2"
   },
   "devDependencies": {
