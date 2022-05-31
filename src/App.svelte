@@ -1,4 +1,14 @@
 <script>
+
+	// NOTE: RUN WITH HTTP://, NOT FILE://
+	window.addEventListener("load", () => {
+	fetch("v-database.php", { method : "POST" })
+	.then(res => res.text()).then((txt) => {
+		document.getElementById("demo").innerHTML = txt;
+	});
+	});
+
+
 	export let name;
 	export let id;
 
@@ -39,10 +49,12 @@
 			</div>
 			<div class="searchbar noselect">
 				<!-- <h3 class="searchbar-field noselect">Search a keyword</h3> -->
-				2
+				<h6 id="app-version">Vision v.2.4</h6>
 			</div>
-			<div class="navigation-top noselect">3</div>
-			<div class="sidebar-right noselect">4</div>
+			<div class="navigation-top noselect">
+			</div>
+			<div class="sidebar-right noselect">
+			</div>
 			<div class="sidebar-bottom noselect">
 				<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
 				<!-- <h4 class="profile-name">{name}#{id}</h4> -->
@@ -55,7 +67,7 @@
 			</div>
 			<div class="secondary-field noselect" style="overflow-y: scroll">
 				<ul class="cards fadein-2s">
-					<h3 style="color:lightgray; border-bottom: solid 0.2vh #3a4f84; padding-bottom: 1.5vh; width: 80%; margin-right: 10%; margin-left: 10%">Incoming Messages</h3>
+					<h3 style="color:lightgray; border-bottom: solid 0.2vh #3a4f84; padding-bottom: 1.5vh; width: 80%; margin-right: 10%; margin-left: 8.5%">Incoming Messages</h3>
 					<li>
 						<div class="items">
 							<div class="item-text">
@@ -79,52 +91,52 @@
 							<div class="item-text">
 								<h4 class="item-name">RosePhoenix</h4>
 								<h6 class="item-name color-grey">Catgirl</h6>
-								<h6 class="item-message">➤ [Attachment] - </h6>
+								<h6 class="item-message">➤ [Attachment] </h6>
 							</div>
 						</div>
 					</li>    
 					<li>
 						<div class="items">
 							<div class="item-text">
-								<h4 class="item-name">John</h4>
-								<h6 class="item-name color-grey">🍌 Nanism</h6>
-								<h6 class="item-message">➤ Hey whats up?</h6>
+								<h4 class="item-name">Raccoonooo</h4>
+								<h6 class="item-name color-grey">😩 we live on lies</h6>
+								<h6 class="item-message">➤ Kommer du på skolen imorgen?</h6>
 							</div>
 						</div>
 					</li>    
 					<li>
 						<div class="items">
 							<div class="item-text">
-								<h4 class="item-name">John</h4>
-								<h6 class="item-name color-grey">🍌 Nanism</h6>
-								<h6 class="item-message">➤ Hey whats up?</h6>
+								<h4 class="item-name">Toro</h4>
+								<h6 class="item-name color-grey">🙄 Based</h6>
+								<h6 class="item-message">➤ bruker 80 nå</h6>
 							</div>
 						</div>
 					</li>    
 					<li>
 						<div class="items">
 							<div class="item-text">
-								<h4 class="item-name">John</h4>
-								<h6 class="item-name color-grey">🍌 Nanism</h6>
-								<h6 class="item-message">➤ Hey whats up?</h6>
+								<h4 class="item-name">Drox</h4>
+								<h6 class="item-name color-grey">💀 Firkant</h6>
+								<h6 class="item-message">➤ Nattiii natt 💕</h6>
 							</div>
 						</div>
 					</li>    
 					<li>
 						<div class="items">
 							<div class="item-text">
-								<h4 class="item-name">John</h4>
-								<h6 class="item-name color-grey">🍌 Nanism</h6>
-								<h6 class="item-message">➤ Hey whats up?</h6>
+								<h4 class="item-name">Marryc</h4>
+								<h6 class="item-name color-grey"><span style="font-weight: bold">Playing</span> Minecraft</h6>
+								<h6 class="item-message">➤ Stopp å erp'e! La meg joineee!!</h6>
 							</div>
 						</div>
 					</li>    
 					<li>
 						<div class="items">
 							<div class="item-text">
-								<h4 class="item-name">John</h4>
-								<h6 class="item-name color-grey">🍌 Nanism</h6>
-								<h6 class="item-message">➤ Hey whats up?</h6>
+								<h4 class="item-name">Gangstergruppa</h4>
+								<h6 class="item-name color-grey">Luna, Peder, Brage, Tor Oskar...</h6>
+								<h6 class="item-message">➤ Har vi fri imorgen?</h6>
 							</div>
 						</div>
 					</li>    
@@ -133,7 +145,7 @@
 			<div class="main-field noselect">
 				<div class="main-field-container">
 					<div class="main-content">
-
+						<div id="demo"></div>
 					</div>
 				</div>
 			</div>
@@ -738,5 +750,13 @@
     .cards {
         display: none;
     }
+	#app-version {
+		display: none;
+	}
+	}
+
+	#app-version {
+		margin-top: 3%;
+		margin-bottom: 2.5%;
 	}
 </style>
