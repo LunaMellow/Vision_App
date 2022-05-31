@@ -5,6 +5,10 @@
   "description": "Central hub for all LunaMellow projects",
   "main": "src/index.js",
   "scripts": {
+    "dev": "run-p dev:*",
+    "dev:rollup": "rollup -c -w",
+    "dev:routify": "routify",
+    "build": "routify -b && rollup -c",
     "start": "concurrently \"npm:svelte-dev\" \"electron-forge start\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -48,8 +52,7 @@
     "concurrently": "^7.1.0",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-squirrel-startup": "^1.0.0",
-    "rollup": "^2.70.2",
-    "svelte-spa-router": "^3.2.0"
+    "rollup": "^2.70.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
@@ -59,7 +62,9 @@
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "@rollup/plugin-commonjs": "^21.1.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
+    "@roxi/routify": "^2.18.7",
     "electron": "18.1.0",
+    "npm-run-all": "^4.1.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.5",
