@@ -222,4 +222,3 @@ app.on('activate', () => {
       new TouchBarSpacer({ size: 'large' })
     ]
   })
-
