@@ -1,14 +1,4 @@
 <script>
-
-	// NOTE: RUN WITH HTTP://, NOT FILE://
-	window.addEventListener("load", () => {
-	fetch("v-database.php", { method : "POST" })
-	.then(res => res.text()).then((txt) => {
-		document.getElementById("demo").innerHTML = txt;
-	});
-	});
-
-
 	export let name;
 	export let id;
 
