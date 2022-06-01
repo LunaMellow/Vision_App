@@ -1,11 +1,11 @@
-<script>
+<script src="index.js">
 	export let name;
 	export let id;
 
 	/* SHOW ABOUT TAB */
 	function showAbout() {
-		var hideAll = document.getElementById("everything");
-		hideAll.style.display === "none"
+		var showElement = document.getElementById("layout");
+		showElement.style.display === "none"
 	}
 	/*-------------------*/
 
@@ -135,7 +135,6 @@
 			<div class="main-field noselect">
 				<div class="main-field-container">
 					<div class="main-content">
-						<div id="demo"></div>
 					</div>
 				</div>
 			</div>
