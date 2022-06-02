@@ -217,7 +217,7 @@
 
 	main {
 		font-family: 'Noto Sans', sans-serif;		
-		overflow-y: scroll;
+		overflow-y: hidden;
 		text-align: center;
 		max-width: 240px;	
 	}
@@ -347,7 +347,7 @@
 	grid:
 		"main-top-left main-top-left main-top-right main-top-right" 10%
 		"main-middle-left main-middle-left main-middle-right main-middle-right" 40%
-		"main-bottom main-bottom main-bottom main-bottom" 30%
+		"main-bottom main-bottom main-bottom main-bottom" 10%
 		/ 35% 25% 20% 10%;
 	gap: 2%;
 }
@@ -385,7 +385,7 @@
 .wrapper{
     width: 100%;
     display: flex;
-    animation: slide 16s infinite;
+    animation: slide 23s infinite;
 }
 
 .slideshow{
@@ -397,27 +397,48 @@
     0%{
         transform: translateX(0);
     }
-    25%{
+    5%{
         transform: translateX(0);
     }
-    30%{
+    15%{
         transform: translateX(-100%);
+    }
+    20%{
+        transform: translateX(-100%);
+    }
+    30%{
+        transform: translateX(-200%);
+    }
+    35%{
+        transform: translateX(-200%);
+    }
+    45%{
+        transform: translateX(-300%);
     }
     50%{
-        transform: translateX(-100%);
+        transform: translateX(-300%);
     }
-    55%{
-        transform: translateX(-200%);
+	60%{
+        transform: translateX(-400%);
     }
-    75%{
-        transform: translateX(-200%);
+    65%{
+        transform: translateX(-400%);
+    }
+	75%{
+        transform: translateX(-500%);
     }
     80%{
-        transform: translateX(-300%);
+        transform: translateX(-500%);
     }
-    100%{
-        transform: translateX(-300%);
+	90%{
+        transform: translateX(-600%);
     }
+    95%{
+        transform: translateX(-600%);
+    }
+	100%{
+        transform: translateX(0%);
+	}
 }  
 
 	.sidebar {
