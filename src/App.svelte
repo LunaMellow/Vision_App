@@ -1,4 +1,9 @@
+<!-- onMount(()=>{
+	isPageLoaded=true;
+}); -->
+
 <script src="index.js">
+	// import { Circle3 } from 'svelte-loading-spinners'
 	export let name;
 	export let id;
 
@@ -33,7 +38,8 @@
 </script>
 
 <main>
-	<body onload="startTime()" class="layout fadein-2s">
+	<body onLoad="loadingAnimation()" class="layout fadein-2s">
+		<!-- <Circle3 size="80" color="#FF3E00" unit="px" duration="2s" style="position:absolute; Top:50%; Left:50%; display: flex; align-items: center; justify-content: center;" id = "loadingDots"></Circle3> -->
 		<!-- <div id="home"> -->
 			<div class="sidebar-top noselect">
 			</div>
@@ -135,6 +141,32 @@
 			<div class="main-field noselect">
 				<div class="main-field-container">
 					<div class="main-content">
+						<div class="main-top-left main-box">
+							<div class="main-top-left-text">
+								<h4 id="fullstack-title">Fullstack DEV</h4>
+								<h1 id="name-title">Luna Sofie Bergh</h1>
+							</div>
+						</div>
+						<div class="main-top-right main-box">  <!-- https://github.com/LunaMellow https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png -->
+							<div class="socials">
+								<img src="https://cdn.discordapp.com/attachments/640641733151162388/982030723550707762/git.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;">
+								<img src="https://cdn.discordapp.com/attachments/640641733151162388/982032293151535194/repl.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;">	
+							</div>
+						</div>
+						<div class="main-middle-left main-box">
+							<div class="wrapper">
+								<img class="slideshow" src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg" alt="s">
+								<img class="slideshow" src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg" alt="s">
+								<img class="slideshow" src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg" alt="s">
+								<img class="slideshow" src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg" alt="s">
+							  </div>
+						</div>
+						<div class="main-middle-right main-box">
+							<div class="news">
+
+							</div>
+						</div>
+						<div class="main-bottom main-box">
 					</div>
 				</div>
 			</div>
@@ -290,9 +322,99 @@
     	animation: fadein 2s;
 	}
 
-	/* .main-content {
-
+	/* .layout {
+  		width: 100%;
+  		height: 100vh;
+  		display: grid;
+  		grid:
+    	"sidebar-top searchbar navigation-top sidebar-right" 3%
+    	"sidebar-bottom secondary-field main-field sidebar-right-bottom" 1fr
+		"bottombar-left bottombar-secondary bottombar-main bottombar-right" 6.5%
+		/ 4.5% 15% 1fr 15%;
+  		gap: 0px;
 	} */
+
+.main-content {
+	margin-top: 5%;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid:
+		"main-top-left main-top-left main-top-right main-top-right" 10%
+		"main-middle-left main-middle-left main-middle-right main-middle-right" 40%
+		"main-bottom main-bottom main-bottom main-bottom" 30%
+		/ 35% 25% 20% 10%;
+	gap: 2%;
+}
+
+.main-top-left { grid-area: main-top-left; }
+
+.main-top-right { 
+	grid-area: main-top-right; 
+}
+
+.main-middle-left { 
+	grid-area: main-middle-left; 
+	overflow: hidden;
+	border-radius: 1vh;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-middle-right { grid-area: main-middle-right; }
+
+.main-bottom { 
+	grid-area: main-bottom; 
+}
+
+.main-box {
+	border: solid .4vh #192030;
+} 
+
+.main-top-left-text {
+	text-align: left;
+	line-height: .8vh;
+	font-size: 120%;
+	color: rgb(226, 226, 226);
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+.slideshow{
+    width: 100%;
+	border-radius: 1vh;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}  
 
 	.sidebar {
 		margin-top: 2vh;
@@ -638,6 +760,20 @@
 		.tooltip-sidebar-laptop:before {
 			padding-right: 16vh;
 		}
+
+		.main-content {
+			margin-top: 2%;
+			text-align: center;
+			width: 100%;
+			height: 100vh;
+			display: grid;
+			grid:
+				"main-top-left main-top-left main-top-right main-top-right" 10%
+				"main-middle-left main-middle-left main-middle-right main-middle-right" 40%
+				"main-bottom main-bottom main-bottom main-bottom" 30%
+				/ 25% 25% 15% 15%;
+			gap: 5%;
+		}
 	}
 
 @media only screen and (max-width: 1200px) {
@@ -747,5 +883,51 @@
 	#app-version {
 		margin-top: 3%;
 		margin-bottom: 2.5%;
+	}
+
+	.socials {
+		margin-top: 2vh;
+		padding-bottom: 7vh;
+		border-radius: 1vh;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		border: solid .4vh #192030;
+	}
+
+	.news {
+		border-radius: 1vh;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		border: solid .4vh #192030;
+		padding-bottom: 121%
+	}
+
+	#fullstack-title {
+		background: -webkit-linear-gradient(left, rgb(240, 72, 255), rgb(52, 214, 255)); 
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent; 
+		padding: .4vh;
+	}
+
+	#name-title {
+		margin-left: 0.3vh;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.socials {
+			margin-top: 4vh;
+			padding-bottom: 7.5vh;
+		}
+
+		.main-top-left-text {
+			font-size: 100%;
+		}
+
+		.news {
+			padding-bottom: 97%
+		}
+		#fullstack-title {
+			padding-top: .6vh;
+			padding-bottom: .8vh;
+		}
 	}
 </style>
