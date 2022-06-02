@@ -43,26 +43,8 @@
 		<!-- <div id="home"> -->
 			<div class="sidebar-top noselect">
 			</div>
-			<div class="searchbar noselect">
-				<!-- <h3 class="searchbar-field noselect">Search a keyword</h3> -->
-				<h6 id="app-version">Vision v.2.4</h6>
-			</div>
-			<div class="navigation-top noselect">
-			</div>
-			<div class="sidebar-right noselect">
-			</div>
-			<div class="sidebar-bottom noselect">
-				<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
-				<!-- <h4 class="profile-name">{name}#{id}</h4> -->
-				<div class="sidebar">
-					<span data-text="Home" class="tooltip-sidebar-home"><button class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
-					<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s" onclick="showAbout()"><i class="fa fa-user"></i></button></span>
-					<span data-text="Projects" class="tooltip-sidebar-book"><button class="sidebar-buttons fadein-5s" onclick="showProjects()"><i class="fa fa-book"></i></button></span>
-					<span data-text="Development" class="tooltip-sidebar-laptop"><button class="sidebar-buttons fadein-6s" onclick="showDevProc()"><i class="fa fa-laptop"></i></button></span>
-				</div>
-			</div>
-			<div class="secondary-field noselect" style="overflow-y: scroll">
-				<ul class="cards fadein-2s">
+			<div class="secondary-field noselect">
+				<ul class="cards fadein-2s" style="overflow-y: scroll">
 					<h3 style="color:lightgray; border-bottom: solid 0.2vh #3a4f84; padding-bottom: 1.5vh; width: 80%; margin-right: 10%; margin-left: 8.5%">Incoming Messages</h3>
 					<li>
 						<div class="items">
@@ -138,6 +120,24 @@
 					</li>    
 				</ul>
 			</div>
+			<div class="searchbar noselect">
+				<!-- <h3 class="searchbar-field noselect">Search a keyword</h3> -->
+				<h6 id="app-version">Vision v.2.4</h6>
+			</div>
+			<div class="navigation-top noselect">
+			</div>
+			<div class="sidebar-right noselect">
+			</div>
+			<div class="sidebar-bottom noselect">
+				<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
+				<!-- <h4 class="profile-name">{name}#{id}</h4> -->
+				<div class="sidebar">
+					<span data-text="Home" class="tooltip-sidebar-home"><button class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
+					<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s" onclick="showAbout()"><i class="fa fa-user"></i></button></span>
+					<span data-text="Projects" class="tooltip-sidebar-book"><button class="sidebar-buttons fadein-5s" onclick="showProjects()"><i class="fa fa-book"></i></button></span>
+					<span data-text="Development" class="tooltip-sidebar-laptop"><button class="sidebar-buttons fadein-6s" onclick="showDevProc()"><i class="fa fa-laptop"></i></button></span>
+				</div>
+			</div>
 			<div class="main-field noselect">
 				<div class="main-field-container">
 					<div class="main-content">
@@ -149,16 +149,20 @@
 						</div>
 						<div class="main-top-right main-box">  <!-- https://github.com/LunaMellow https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png -->
 							<div class="socials">
-								<img src="https://cdn.discordapp.com/attachments/640641733151162388/982030723550707762/git.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;">
-								<img src="https://cdn.discordapp.com/attachments/640641733151162388/982032293151535194/repl.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;">	
+								<a href="https://github.com/LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982030723550707762/git.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;"></a>
+								<a href="https://replit.com/@LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982032293151535194/repl.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;"></a>
 							</div>
 						</div>
 						<div class="main-middle-left main-box">
 							<div class="wrapper">
-								<img class="slideshow" src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg" alt="s">
-								<img class="slideshow" src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg" alt="s">
-								<img class="slideshow" src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg" alt="s">
-								<img class="slideshow" src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049506206040084/1.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049506633863198/2.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049507191713804/3.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049507623706654/4.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049507921506304/5.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982049508168982538/6.png" alt="s">
+								<img class="slideshow" src="https://media.discordapp.net/attachments/640641733151162388/982050416458076210/7.png" alt="s">
+								<img class="slideshow" src="https://cdn.discordapp.com/attachments/640641733151162388/982050416667811840/8.png" alt="s">
 							  </div>
 						</div>
 						<div class="main-middle-right main-box">
@@ -213,7 +217,7 @@
 
 	main {
 		font-family: 'Noto Sans', sans-serif;		
-		overflow-y: hidden;
+		overflow-y: scroll;
 		text-align: center;
 		max-width: 240px;	
 	}
@@ -906,10 +910,21 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent; 
 		padding: .4vh;
+		transition: transform .15s; /* Animation */
+	}
+
+	#fullstack-title:hover {
+		transform: translate(10px,0);
 	}
 
 	#name-title {
 		margin-left: 0.3vh;
+		transition: transform .15s; /* Animation */
+	}
+
+	#name-title:hover {
+		margin-left: 0.3vh;
+		transform: translate(20px,0);
 	}
 
 	@media only screen and (max-width: 1200px) {
