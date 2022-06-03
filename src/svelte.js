@@ -8,4 +8,9 @@ const app = new App({
 	}
 });
 
+
+function doesThisWork() {
+	console.log("Hey, svelte.js actually works!")
+}
+
 export default app;

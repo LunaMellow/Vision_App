@@ -230,3 +230,8 @@ app.on('activate', () => {
 			currentDate = Date.now();
 		} while (currentDate - date < milliseconds);
 	}
+
+
+	function doesThisWork() {
+		console.log("Hey, index.js actually works!")
+	}
