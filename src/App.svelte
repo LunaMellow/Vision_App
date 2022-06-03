@@ -1,40 +1,10 @@
-<!-- onMount(()=>{
-	isPageLoaded=true;
-}); -->
-
-<script src="index.js">
-	// import { Circle3 } from 'svelte-loading-spinners'
+<script lang="js">
 	export let name;
 	export let id;
 
-	/* SHOW ABOUT TAB */
-	function showAbout() {
-		var showElement = document.getElementById("layout");
-		showElement.style.display === "none"
+	function doesThisWork() {
+		console.log("Hey, mainfile actually works!");
 	}
-	/*-------------------*/
-
-
-	/* SHOW PROJECTS TAB */
-	function showProjects() {
-
-	}	
-	/*-------------------*/
-
-
-	/* SHOW PROJECTS TAB */
-	function showDevProc() {
-
-	}	
-	/*-------------------*/
-
-
-	/* SHOW PROJECTS TAB */
-	function showSettings() {
-
-	}	
-	/*-------------------*/
-	
 </script>
 
 <main>
@@ -45,7 +15,7 @@
 			</div>
 			<div class="secondary-field noselect">
 				<ul class="cards fadein-2s" style="overflow-y: scroll">
-					<h3 style="color:lightgray; border-bottom: solid 0.2vh #3a4f84; padding-bottom: 1.5vh; width: 80%; margin-right: 10%; margin-left: 8.5%">Incoming Messages</h3>
+					<h3 id="incoming-header">Incoming Messages</h3>
 					<li>
 						<div class="items">
 							<div class="item-text">
@@ -132,8 +102,8 @@
 				<span data-text="Hi {name}!" class="tooltip fadein-2s"><img class="logo" src="https://cdn.discordapp.com/attachments/640641733151162388/966421281111150612/logo_white.png" alt="Vision"></span>
 				<!-- <h4 class="profile-name">{name}#{id}</h4> -->
 				<div class="sidebar">
-					<span data-text="Home" class="tooltip-sidebar-home"><button class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
-					<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s" onclick="showAbout()"><i class="fa fa-user"></i></button></span>
+					<span data-text="Home" class="tooltip-sidebar-home"><button id="home" class="sidebar-buttons fadein-3s"><i class="fa fa-home"></i></button></span>
+					<span data-text="About" class="tooltip-sidebar-user"><button class="sidebar-buttons fadein-4s"><i class="fa fa-user"></i></button></span>
 					<span data-text="Projects" class="tooltip-sidebar-book"><button class="sidebar-buttons fadein-5s" onclick="showProjects()"><i class="fa fa-book"></i></button></span>
 					<span data-text="Development" class="tooltip-sidebar-laptop"><button class="sidebar-buttons fadein-6s" onclick="showDevProc()"><i class="fa fa-laptop"></i></button></span>
 				</div>
@@ -149,8 +119,11 @@
 						</div>
 						<div class="main-top-right main-box">  <!-- https://github.com/LunaMellow https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/1200px-Repl.it_logo.svg.png -->
 							<div class="socials">
-								<a href="https://github.com/LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982030723550707762/git.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;"></a>
-								<a href="https://replit.com/@LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982032293151535194/repl.png" alt="GIT" style="height: 5vh; float: right; margin-right: 1vh; margin-top: 1vh;"></a>
+								<a href="https://github.com/LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982030723550707762/git.png" alt="GIT" class="social-icon" style="height: 5vh; float: center; margin-left: .3vh;"></a>
+								<a href="https://replit.com/@LunaMellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982220695176106014/repl.png" alt="REPL" class="social-icon social-icon-gap" style="height: 5vh; float: center;"></a>
+								<a href="https://www.twitch.tv/lunamellow"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982221051289280542/Daco_5303498.png" alt="TTV" class="social-icon social-icon-gap" style="height: 4.8vh; float: center;"></a>
+								<a href="https://www.instagram.com/explorevoid/"><img src="https://cdn.discordapp.com/attachments/640641733151162388/982222114788618320/insta.png" alt="INSTA" class="social-icon social-icon-gap" style="height: 5vh; float: center;"></a>
+								<a href="https://twitter.com/Lunamellower"><img src="https://media.discordapp.net/attachments/640641733151162388/982225280569602058/twitter.png" alt="TWT" class="social-icon social-icon-gap" style="height: 5vh; float: center;"></a>
 							</div>
 						</div>
 						<div class="main-middle-left main-box">
@@ -167,10 +140,28 @@
 						</div>
 						<div class="main-middle-right main-box">
 							<div class="news">
-
+								<h2 id="news-header">NEWS</h2>
+								<div class="articles">
+									<h4 class="news-under-title">Vision <span class="gradient">v2</span> Is Finally Out!</h4>
+									<h6 class="news-under-description">~ <span class="gradient">V2</span> Was launched on march 26th and has since set the new design profile for the app</h6>
+								</div>
+								<div class="articles">
+									<h4 class="news-under-title">Routify Was Removed</h4>
+									<h6 class="news-under-description">~ Because of incompatibilty, Routify had to be removed. Routing is now SPA-based</h6>
+								</div>
+								<div class="articles">
+									<h4 class="news-under-title">Crashes From Slots Minigame Fixed!</h4>
+									<h6 class="news-under-description">~ A known issue with the Casino Slots was fixes. It was due to a exception error</h6>
+								</div>
+								<div class="articles">
+									<h4 class="news-under-title">First Test Build Failed</h4>
+									<h6 class="news-under-description" style="margin-bottom: 1vh;">~ Unfortunately the first test-build of the application failed. I will be looking into this further when the app is ready for packaging</h6>
+								</div>
 							</div>
 						</div>
 						<div class="main-bottom main-box">
+						<div class="main-bottom-bar">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -347,7 +338,7 @@
 	grid:
 		"main-top-left main-top-left main-top-right main-top-right" 10%
 		"main-middle-left main-middle-left main-middle-right main-middle-right" 40%
-		"main-bottom main-bottom main-bottom main-bottom" 10%
+		"main-bottom main-bottom main-bottom main-bottom" 25%
 		/ 35% 25% 20% 10%;
 	gap: 2%;
 }
@@ -365,10 +356,15 @@
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.main-middle-right { grid-area: main-middle-right; }
+.main-middle-right { 
+	grid-area: main-middle-right; 
+}
 
 .main-bottom { 
 	grid-area: main-bottom; 
+	border-radius: 1vh;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	height: 100%;
 }
 
 .main-box {
@@ -386,6 +382,10 @@
     width: 100%;
     display: flex;
     animation: slide 23s infinite;
+}
+
+.main-bottom-bar {
+	height: 100%;
 }
 
 .slideshow{
@@ -912,17 +912,73 @@
 
 	.socials {
 		margin-top: 2vh;
-		padding-bottom: 7vh;
+		padding-bottom: 1.2vh;
 		border-radius: 1vh;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		border: solid .4vh #192030;
+	}
+
+	.social-icon {
+		padding-top: 1vh;
+		transition: transform .15s; /* Animation */
+	}
+
+	.social-icon:hover {
+		transform: scale(1.1);
 	}
 
 	.news {
 		border-radius: 1vh;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		border: solid .4vh #192030;
-		padding-bottom: 121%
+		height: 100%;
+	}
+
+	#news-header {
+		background: -webkit-linear-gradient(left, rgb(240, 72, 255), rgb(52, 214, 255)); 
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent; 
+		padding: 1vh;
+		text-align: left;
+		margin-left: 1vh;
+		transition: transform .15s; /* Animation */
+	}
+
+	#news-header:hover {
+		transform: translate(10px, 0);
+	}
+
+	.news-under-title {
+		text-align: left;
+		margin-left: 2vh;
+		border-bottom: dotted .3vh rgb(89, 81, 175);
+		padding-bottom: 0vh;
+		margin-right: 2vh;
+		line-height: 2.8vh;
+		margin-bottom: .7vh;
+		margin-top: 1vh;
+	}
+
+	.news-under-description {
+		text-align: left;
+		margin-left: 2vh;
+		margin-right: 2vh;
+		padding-top: 0vh;
+		margin-top: 0vh;
+		line-height: 1.3vh;
+		margin-bottom: 0;
+	}
+
+	.articles {
+		line-height: 0;
+		color:lightgray;
+		transition: transform .2s;
+		font-size: 100%;
+	}
+	.articles:hover {
+		transform: scale(1.02);
+		color: rgb(140, 130, 200);
 	}
 
 	#fullstack-title {
@@ -935,7 +991,7 @@
 	}
 
 	#fullstack-title:hover {
-		transform: translate(10px,0);
+		transform: translate(10px, 0);
 	}
 
 	#name-title {
@@ -948,22 +1004,62 @@
 		transform: translate(20px,0);
 	}
 
+	#incoming-header {
+		color:lightgray;
+		border-bottom: solid 0.2vh #3a4f84;
+		padding-bottom: 1.5vh;
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 8.5%;
+		transition: transform .15s; /* Animation */
+	}
+
+	#incoming-header:hover {
+		transform: scale(1.05);
+	}
+
+	.social-icon-gap {
+		margin-left: .6vh;
+	}
+
+	.gradient {
+		background: -webkit-linear-gradient(left, rgb(240, 72, 255), rgb(245, 163, 248)); 
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent; 
+	}
+
 	@media only screen and (max-width: 1200px) {
 		.socials {
 			margin-top: 4vh;
-			padding-bottom: 7.5vh;
+			padding-bottom: 1vh;
 		}
 
 		.main-top-left-text {
 			font-size: 100%;
 		}
 
-		.news {
-			padding-bottom: 97%
-		}
 		#fullstack-title {
 			padding-top: .6vh;
 			padding-bottom: .8vh;
 		}
+		#news-header {
+			padding: 1vh;
+			font-size: 100%;
+		}
+
+		.social-icon-gap {
+			margin-left: 2vh;
+		}
+		.articles {
+			font-size: 60%;
+		}
 	}
+
+	@media only screen and (max-width: 1700px) {
+		.articles {
+			font-size: 80%;
+		}
+	}
+
 </style>
