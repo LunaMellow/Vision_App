@@ -161,6 +161,15 @@
 						</div>
 						<div class="main-bottom main-box">
 						<div class="main-bottom-bar">
+							<div class="bottom-cards">
+								Box 1
+							</div>
+							<div class="bottom-cards">
+								Box 2
+							</div>
+							<div class="bottom-cards">
+								Box 3
+							</div>
 						</div>
 					</div>
 				</div>
@@ -894,6 +903,15 @@
 
 	.color-grey {
 		color: rgb(138, 138, 138);
+	}
+
+	.bottom-cards {
+		margin-inline: 1vh;
+		border-radius: 1vh;
+		background-color: rgb(52, 36, 79);
+		display: inline-flex;
+		padding: 14vh;
+		margin: 1vh;
 	}
 
 	@media only screen and (max-width: 1200px) {
